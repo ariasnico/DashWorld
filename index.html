@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="CORDIS DIE - Vigilancia Global en Tiempo Real. Dashboard táctico de noticias mundiales.">
+    <meta name="theme-color" content="#050505">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>CORDIS DIE // VIGILANCIA GLOBAL EN TIEMPO REAL</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/css/main.css">
+
+    <!-- External Dependencies -->
+    <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/globe.gl@2.28.0/dist/globe.gl.min.js"></script>
+</head>
+<body>
+
+    <!-- ===== Visual Effects ===== -->
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <!-- ===== Loader ===== -->
+    <div id="loader" class="loader">
+        <h2 class="blink loader__title">INITIALIZING CORDIS DIE UPLINK...</h2>
+        <div class="loader__bar">
+            <div class="loader__progress"></div>
+        </div>
+        <div id="loading-text" class="loader__text">ESTABLISHING SECURE CONNECTION TO SATELLITE NETWORK</div>
+        <div id="error-msg" class="loader__error">CONNECTION UNSTABLE.<br>BYPASSING SECURITY PROTOCOLS...</div>
+    </div>
+
+    <!-- ===== HUD Header ===== -->
+    <header class="hud-header">
+        <div>
+            <h1>TACTICAL VIEW <span class="hud-header__version">V.9.5 (LIVE OSINT)</span></h1>
+        </div>
+        <div class="sys-status">
+            <div>DEFCON: <span class="sys-status__defcon">3</span></div>
+            <div>STATUS: <span class="blink sys-status__online">ONLINE</span></div>
+            <div id="clock">00:00:00 ZULU</div>
+        </div>
+    </header>
+
+    <!-- ===== Intel Panel ===== -->
+    <aside id="intelPanel" class="intel-panel">
+        <h2 id="pCountry" class="intel-panel__title">TARGET</h2>
+        <div class="intel-panel__coords-bar">
+            COORDS: <span id="pCoords" class="intel-panel__coords-value">CALCULATING...</span>
+        </div>
+
+        <div class="section-label">DATOS ESTRATEGICOS // MACROECONOMIA</div>
+        <ul class="data-list data-list--fixed" id="factsList">
+            <li class="decrypting">ESPERANDO SELECCION DE OBJETIVO...</li>
+        </ul>
+
+        <div class="section-label">INTERCEPCIONES EN VIVO // POLITICA Y CRISIS</div>
+        <ul class="data-list" id="newsList">
+            <li class="decrypting">ESPERANDO SELECCION DE OBJETIVO...</li>
+        </ul>
+
+        <button id="closePanelBtn" class="intel-panel__close-btn">DISENGAGE TARGET</button>
+    </aside>
+
+    <!-- ===== Ticker ===== -->
+    <div class="ticker-wrap">
+        <div class="ticker" id="globalTicker">
+            /// INICIANDO SATELITE ODIN /// ESTABLECIENDO CONEXION CON BASES DE DATOS GLOBALES /// RECOPILANDO INTELIGENCIA...
+        </div>
+    </div>
+
+    <!-- ===== Globe ===== -->
+    <div id="globe-container" class="globe-container"></div>
+
+    <!-- ===== Application ===== -->
+    <script type="module" src="src/js/app.js"></script>
+
+</body>
+</html>

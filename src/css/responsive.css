@@ -1,0 +1,136 @@
+/* ==========================================================================
+   CORDIS DIE // Responsive Breakpoints
+   ========================================================================== */
+
+/* --- Tablet (max-width: 768px) --- */
+@media screen and (max-width: 768px) {
+    .hud-header {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        height: 50px;
+        padding: 0 12px;
+        clip-path: none;
+    }
+
+    .hud-header h1 {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    .hud-header__version {
+        display: none;
+    }
+
+    .sys-status {
+        font-size: 10px;
+    }
+
+    .intel-panel {
+        width: 100%;
+        top: 70px;
+        right: -110%;
+        padding: var(--space-md);
+        bottom: var(--ticker-height);
+    }
+
+    .intel-panel.active {
+        right: 0;
+    }
+
+    .intel-panel__title {
+        font-size: 22px;
+    }
+
+    .section-label {
+        font-size: 12px;
+    }
+
+    .data-list li {
+        font-size: 12px;
+    }
+
+    .data-label {
+        width: 120px;
+    }
+}
+
+/* --- Mobile (max-width: 480px) --- */
+@media screen and (max-width: 480px) {
+    .hud-header {
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        height: 44px;
+        padding: 0 8px;
+        border-left-width: 3px;
+    }
+
+    .hud-header h1 {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .sys-status {
+        font-size: 9px;
+    }
+
+    .intel-panel {
+        top: 55px;
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .intel-panel__title {
+        font-size: 18px;
+    }
+
+    .section-label {
+        font-size: 11px;
+        margin-top: var(--space-md);
+    }
+
+    .data-list--fixed {
+        min-height: 120px;
+    }
+
+    .data-list li {
+        font-size: 11px;
+        margin-bottom: 10px;
+        padding: 6px;
+    }
+
+    .data-label {
+        width: 100px;
+        font-size: 10px;
+    }
+
+    .intel-panel__close-btn {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .ticker {
+        font-size: 11px;
+    }
+
+    .vignette {
+        box-shadow: inset 0 0 80px rgba(0, 0, 0, 1);
+    }
+}
+
+/* --- Landscape Mobile --- */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hud-header {
+        top: 5px;
+        height: 40px;
+    }
+
+    .intel-panel {
+        top: 50px;
+        flex-direction: column;
+    }
+
+    .data-list--fixed {
+        min-height: 100px;
+    }
+}
