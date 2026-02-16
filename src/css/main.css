@@ -1,0 +1,18 @@
+/* ==========================================================================
+   CORDIS DIE // Main Stylesheet
+   Aggregates all CSS modules in dependency order.
+   ========================================================================== */
+
+@import 'variables.css';
+@import 'base.css';
+
+/* Components */
+@import 'components/effects.css';
+@import 'components/header.css';
+@import 'components/loader.css';
+@import 'components/intel-panel.css';
+@import 'components/ticker.css';
+@import 'components/globe.css';
+
+/* Responsive overrides (must be last) */
+@import 'responsive.css';

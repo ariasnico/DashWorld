@@ -1,0 +1,46 @@
+/* ==========================================================================
+   CORDIS DIE // HUD Header
+   ========================================================================== */
+
+.hud-header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, var(--glass-panel) 0%, rgba(0, 0, 0, 0) 100%);
+    border-bottom: 2px solid var(--primary);
+    border-left: 5px solid var(--primary);
+    padding: 0 20px;
+    z-index: var(--z-ui);
+    clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
+}
+
+.hud-header h1 {
+    font-family: var(--font-display);
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px var(--primary);
+    font-size: 24px;
+}
+
+.hud-header__version {
+    font-size: 12px;
+    color: var(--accent);
+}
+
+.sys-status {
+    text-align: right;
+    font-size: 12px;
+}
+
+.sys-status__defcon {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.sys-status__online {
+    color: var(--accent);
+}

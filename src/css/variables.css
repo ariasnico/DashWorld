@@ -1,0 +1,39 @@
+/* ==========================================================================
+   CORDIS DIE // Design Tokens & CSS Custom Properties
+   ========================================================================== */
+
+:root {
+    /* --- Color Palette --- */
+    --primary: #ff8c00;
+    --primary-dim: #b36b00;
+    --accent: #00f3ff;
+    --danger: #ff003c;
+    --bg-dark: #050505;
+    --glass-panel: rgba(10, 10, 10, 0.90);
+
+    /* --- Typography --- */
+    --font-display: 'Orbitron', sans-serif;
+    --font-mono: 'Share Tech Mono', monospace;
+
+    /* --- Spacing --- */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+
+    /* --- Z-Index Layers --- */
+    --z-globe: 1;
+    --z-ui: 500;
+    --z-vignette: 900;
+    --z-scanlines: 1000;
+    --z-loader: 2000;
+
+    /* --- Transitions --- */
+    --transition-panel: right 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+
+    /* --- Panel Dimensions --- */
+    --panel-width: 440px;
+    --header-height: 60px;
+    --ticker-height: 30px;
+}

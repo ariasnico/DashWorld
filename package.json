@@ -1,0 +1,10 @@
+{
+  "name": "cordis-die",
+  "version": "1.0.0",
+  "description": "CORDIS DIE - Vigilancia Global en Tiempo Real. Dashboard táctico de noticias mundiales.",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "preview": "npx serve ."
+  }
+}

@@ -1,0 +1,56 @@
+/* ==========================================================================
+   CORDIS DIE // Loading Screen
+   ========================================================================== */
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: var(--z-loader);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s;
+}
+
+.loader__title {
+    font-family: var(--font-display);
+    color: var(--primary);
+}
+
+.loader__bar {
+    width: 300px;
+    height: 2px;
+    background: #333;
+    margin-top: 15px;
+}
+
+.loader__progress {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    animation: load 3s forwards;
+}
+
+@keyframes load {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+.loader__text {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.loader__error {
+    color: var(--danger);
+    font-size: 12px;
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+}
