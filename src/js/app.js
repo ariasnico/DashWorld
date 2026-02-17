@@ -4,15 +4,17 @@
  */
 
 import { initLoaderFallback } from './loader.js';
-import { initGlobe, resetGlobeView } from './globe.js';
+import { initGlobe, resetGlobeView, registerCountriesCallback } from './globe.js';
 import { loadGlobalTicker } from './ticker.js';
 import { startClock } from './clock.js';
+import { initSearch } from './search.js';
 
 /**
  * Boot sequence — called on DOM ready.
  */
 function boot() {
     initLoaderFallback();
+    registerCountriesCallback(initSearch);
     initGlobe();
     loadGlobalTicker();
     startClock();

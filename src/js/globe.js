@@ -9,6 +9,15 @@ import { updateDashboard, closePanel } from './dashboard.js';
 
 const container = document.getElementById('globe-container');
 let world = null;
+let _countriesReadyCallback = null;
+
+/**
+ * Register a callback to receive GeoJSON features once the globe has loaded them.
+ * @param {function} fn
+ */
+export function registerCountriesCallback(fn) {
+    _countriesReadyCallback = fn;
+}
 
 /**
  * Initialize the 3D globe, load GeoJSON, and bind interactions.
@@ -48,6 +57,7 @@ export function initGlobe() {
                 .polygonCapColor(() => cfg.polygonBaseColor)
                 .polygonAltitude(cfg.polygonBaseAltitude);
             setTimeout(hideLoader, 1000);
+            if (_countriesReadyCallback) _countriesReadyCallback(countries.features);
         })
         .catch(console.error);
 
@@ -58,7 +68,7 @@ export function initGlobe() {
 /**
  * Focus camera on a specific country and open the dashboard.
  */
-function focusCountry(props, lat, lng) {
+export function focusCountry(props, lat, lng) {
     world.controls().autoRotate = false;
     world.pointOfView({ lat, lng, altitude: CONFIG.globe.focusAltitude }, CONFIG.animations.focusDuration);
     updateDashboard(props, lat, lng);
