@@ -1,0 +1,132 @@
+/* ==========================================================================
+   CORDIS DIE // Country Search Widget
+   ========================================================================== */
+
+.search-widget {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    width: 280px;
+    z-index: var(--z-ui);
+}
+
+/* --- Input Field Container --- */
+.search-widget__field {
+    display: flex;
+    align-items: center;
+    background: var(--glass-panel);
+    border: 1px solid var(--primary);
+    border-left: 4px solid var(--primary);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 12px rgba(255, 140, 0, 0.15), inset 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.search-widget__field:focus-within {
+    box-shadow: 0 0 22px rgba(255, 140, 0, 0.45), inset 0 0 8px rgba(0, 0, 0, 0.5);
+    border-color: #ffa040;
+}
+
+/* --- Decorative Icon --- */
+.search-widget__icon {
+    color: var(--primary);
+    font-size: 14px;
+    padding: 0 8px 0 10px;
+    opacity: 0.7;
+    flex-shrink: 0;
+    text-shadow: 0 0 6px var(--primary);
+}
+
+/* --- Text Input --- */
+.search-widget__input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--primary);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 10px 10px 10px 0;
+    width: 100%;
+    cursor: text;
+    user-select: text;
+}
+
+.search-widget__input::placeholder {
+    color: var(--primary-dim);
+    opacity: 0.55;
+    letter-spacing: 1px;
+}
+
+/* --- Dropdown Results --- */
+.search-widget__results {
+    background: var(--glass-panel);
+    border: 1px solid var(--primary);
+    border-top: none;
+    border-left: 4px solid var(--primary);
+    backdrop-filter: blur(5px);
+    max-height: 240px;
+    overflow-y: auto;
+    animation: search-scan-down 0.15s ease-out;
+}
+
+@keyframes search-scan-down {
+    from { clip-path: inset(0 0 100% 0); }
+    to   { clip-path: inset(0 0 0% 0); }
+}
+
+.search-widget__results::-webkit-scrollbar {
+    width: 4px;
+}
+
+.search-widget__results::-webkit-scrollbar-thumb {
+    background: var(--primary);
+}
+
+/* --- Individual Result Item --- */
+.search-widget__result-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--primary);
+    border-bottom: 1px solid #1c1c1c;
+    cursor: crosshair;
+    transition: background 0.1s, color 0.1s;
+}
+
+.search-widget__result-item:last-child {
+    border-bottom: none;
+}
+
+.search-widget__result-item:hover,
+.search-widget__result-item--active {
+    background: rgba(255, 140, 0, 0.15);
+    color: var(--accent);
+}
+
+/* --- ISO Code Badge --- */
+.search-widget__result-iso {
+    color: var(--primary-dim);
+    font-size: 10px;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+    min-width: 22px;
+    transition: color 0.1s;
+}
+
+.search-widget__result-item:hover .search-widget__result-iso,
+.search-widget__result-item--active .search-widget__result-iso {
+    color: var(--accent);
+}
+
+/* --- Country Name --- */
+.search-widget__result-name {
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

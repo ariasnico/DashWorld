@@ -2,6 +2,24 @@
    CORDIS DIE // Responsive Breakpoints
    ========================================================================== */
 
+/* --- Search Widget --- */
+@media screen and (max-width: 768px) {
+    .search-widget {
+        top: 70px;
+        left: 10px;
+        width: calc(100% - 20px);
+        max-width: 280px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search-widget {
+        top: 58px;
+        left: 5px;
+        max-width: 240px;
+    }
+}
+
 /* --- Tablet (max-width: 768px) --- */
 @media screen and (max-width: 768px) {
     .hud-header {

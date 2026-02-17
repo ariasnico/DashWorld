@@ -13,6 +13,7 @@
 @import 'components/intel-panel.css';
 @import 'components/ticker.css';
 @import 'components/globe.css';
+@import 'components/search.css';
 
 /* Responsive overrides (must be last) */
 @import 'responsive.css';
