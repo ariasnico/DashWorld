@@ -10,6 +10,8 @@ import { updateDashboard, closePanel } from './dashboard.js';
 const container = document.getElementById('globe-container');
 let world = null;
 let _countriesReadyCallback = null;
+let _countryCoords = {};
+let _ringSources = {};
 
 /**
  * Register a callback to receive GeoJSON features once the globe has loaded them.
@@ -17,6 +19,33 @@ let _countriesReadyCallback = null;
  */
 export function registerCountriesCallback(fn) {
     _countriesReadyCallback = fn;
+}
+
+/**
+ * Return the globe.gl instance for direct layer manipulation.
+ */
+export function getGlobe() {
+    return world;
+}
+
+/**
+ * Lookup centroid coordinates for a country by ISO_A2 code.
+ * @param {string} iso - ISO_A2 country code
+ * @returns {{ lat: number, lng: number } | null}
+ */
+export function getCountryCoords(iso) {
+    return _countryCoords[iso] || null;
+}
+
+/**
+ * Ring coordinator — merges rings from multiple sources and applies to globe.
+ * @param {string} source - identifier (e.g. 'connections', 'events')
+ * @param {Array} rings - array of ring data objects
+ */
+export function updateRings(source, rings) {
+    _ringSources[source] = rings;
+    const merged = Object.values(_ringSources).flat();
+    if (world) world.ringsData(merged);
 }
 
 /**
@@ -57,6 +86,15 @@ export function initGlobe() {
     fetch(CONFIG.api.countriesGeoJson)
         .then(res => res.json())
         .then(countries => {
+            // Build coordinate index by computing centroids from geometry
+            countries.features.forEach(f => {
+                const p = f.properties;
+                const iso = p.ISO_A2;
+                if (!iso || iso === '-99') return;
+                const centroid = computeCentroid(f.geometry);
+                if (centroid) _countryCoords[iso] = centroid;
+            });
+
             world.polygonsData(countries.features)
                 .polygonSideColor(() => cfg.polygonSideColor)
                 .polygonStrokeColor(() => cfg.polygonStrokeColor)
@@ -88,8 +126,38 @@ export function focusCountry(props, lat, lng) {
  */
 export function resetGlobeView() {
     closePanel();
+    // Lazy import to avoid circular dependency at module load time
+    import('./connections.js').then(({ clearConnections }) => clearConnections()).catch(() => {});
     world.controls().autoRotate = true;
     world.pointOfView({ altitude: CONFIG.globe.initialView.altitude }, CONFIG.animations.resetDuration);
+}
+
+/**
+ * Compute a simple centroid from a GeoJSON Polygon or MultiPolygon geometry.
+ * Averages all coordinate points to approximate the center.
+ * @param {object} geometry - GeoJSON geometry object
+ * @returns {{ lat: number, lng: number } | null}
+ */
+function computeCentroid(geometry) {
+    let coords = [];
+    if (geometry.type === 'Polygon') {
+        coords = geometry.coordinates[0]; // outer ring
+    } else if (geometry.type === 'MultiPolygon') {
+        // Use the largest polygon (most points) as representative
+        let largest = [];
+        for (const poly of geometry.coordinates) {
+            if (poly[0].length > largest.length) largest = poly[0];
+        }
+        coords = largest;
+    }
+    if (coords.length === 0) return null;
+
+    let sumLng = 0, sumLat = 0;
+    for (const [lng, lat] of coords) {
+        sumLng += lng;
+        sumLat += lat;
+    }
+    return { lat: sumLat / coords.length, lng: sumLng / coords.length };
 }
 
 /**

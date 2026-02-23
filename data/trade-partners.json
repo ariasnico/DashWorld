@@ -1,0 +1,452 @@
+{
+  "US": {
+    "name": "United States",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 758.4 },
+      { "iso": "MX", "name": "Mexico", "volume": 614.5 },
+      { "iso": "CA", "name": "Canada", "volume": 588.2 },
+      { "iso": "DE", "name": "Germany", "volume": 263.7 },
+      { "iso": "JP", "name": "Japan", "volume": 218.3 }
+    ]
+  },
+  "CN": {
+    "name": "China",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 758.4 },
+      { "iso": "JP", "name": "Japan", "volume": 371.4 },
+      { "iso": "KR", "name": "South Korea", "volume": 362.2 },
+      { "iso": "TW", "name": "Taiwan", "volume": 268.5 },
+      { "iso": "DE", "name": "Germany", "volume": 235.1 }
+    ]
+  },
+  "JP": {
+    "name": "Japan",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 371.4 },
+      { "iso": "US", "name": "United States", "volume": 218.3 },
+      { "iso": "KR", "name": "South Korea", "volume": 93.6 },
+      { "iso": "TW", "name": "Taiwan", "volume": 86.7 },
+      { "iso": "AU", "name": "Australia", "volume": 78.2 }
+    ]
+  },
+  "DE": {
+    "name": "Germany",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 235.1 },
+      { "iso": "US", "name": "United States", "volume": 263.7 },
+      { "iso": "NL", "name": "Netherlands", "volume": 221.3 },
+      { "iso": "FR", "name": "France", "volume": 178.6 },
+      { "iso": "PL", "name": "Poland", "volume": 156.4 }
+    ]
+  },
+  "GB": {
+    "name": "United Kingdom",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 142.8 },
+      { "iso": "DE", "name": "Germany", "volume": 134.5 },
+      { "iso": "NL", "name": "Netherlands", "volume": 97.3 },
+      { "iso": "FR", "name": "France", "volume": 89.6 },
+      { "iso": "CN", "name": "China", "volume": 88.2 }
+    ]
+  },
+  "FR": {
+    "name": "France",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 178.6 },
+      { "iso": "BE", "name": "Belgium", "volume": 108.4 },
+      { "iso": "IT", "name": "Italy", "volume": 98.7 },
+      { "iso": "ES", "name": "Spain", "volume": 93.2 },
+      { "iso": "US", "name": "United States", "volume": 87.5 }
+    ]
+  },
+  "IN": {
+    "name": "India",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 128.5 },
+      { "iso": "CN", "name": "China", "volume": 125.6 },
+      { "iso": "AE", "name": "United Arab Emirates", "volume": 84.3 },
+      { "iso": "SA", "name": "Saudi Arabia", "volume": 52.8 },
+      { "iso": "SG", "name": "Singapore", "volume": 35.7 }
+    ]
+  },
+  "IT": {
+    "name": "Italy",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 146.8 },
+      { "iso": "FR", "name": "France", "volume": 98.7 },
+      { "iso": "US", "name": "United States", "volume": 73.4 },
+      { "iso": "CN", "name": "China", "volume": 68.5 },
+      { "iso": "ES", "name": "Spain", "volume": 57.6 }
+    ]
+  },
+  "BR": {
+    "name": "Brazil",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 150.5 },
+      { "iso": "US", "name": "United States", "volume": 73.2 },
+      { "iso": "AR", "name": "Argentina", "volume": 30.4 },
+      { "iso": "DE", "name": "Germany", "volume": 22.8 },
+      { "iso": "NL", "name": "Netherlands", "volume": 18.6 }
+    ]
+  },
+  "CA": {
+    "name": "Canada",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 588.2 },
+      { "iso": "CN", "name": "China", "volume": 75.3 },
+      { "iso": "GB", "name": "United Kingdom", "volume": 24.7 },
+      { "iso": "JP", "name": "Japan", "volume": 23.8 },
+      { "iso": "MX", "name": "Mexico", "volume": 18.4 }
+    ]
+  },
+  "KR": {
+    "name": "South Korea",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 362.2 },
+      { "iso": "US", "name": "United States", "volume": 169.8 },
+      { "iso": "JP", "name": "Japan", "volume": 93.6 },
+      { "iso": "VN", "name": "Vietnam", "volume": 87.3 },
+      { "iso": "TW", "name": "Taiwan", "volume": 52.4 }
+    ]
+  },
+  "RU": {
+    "name": "Russia",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 190.3 },
+      { "iso": "IN", "name": "India", "volume": 49.4 },
+      { "iso": "TR", "name": "Turkey", "volume": 42.6 },
+      { "iso": "DE", "name": "Germany", "volume": 36.8 },
+      { "iso": "KR", "name": "South Korea", "volume": 28.4 }
+    ]
+  },
+  "AU": {
+    "name": "Australia",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 214.7 },
+      { "iso": "JP", "name": "Japan", "volume": 78.2 },
+      { "iso": "US", "name": "United States", "volume": 46.5 },
+      { "iso": "KR", "name": "South Korea", "volume": 42.3 },
+      { "iso": "NZ", "name": "New Zealand", "volume": 18.9 }
+    ]
+  },
+  "ES": {
+    "name": "Spain",
+    "partners": [
+      { "iso": "FR", "name": "France", "volume": 93.2 },
+      { "iso": "DE", "name": "Germany", "volume": 72.4 },
+      { "iso": "IT", "name": "Italy", "volume": 57.6 },
+      { "iso": "US", "name": "United States", "volume": 37.8 },
+      { "iso": "GB", "name": "United Kingdom", "volume": 34.5 }
+    ]
+  },
+  "MX": {
+    "name": "Mexico",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 614.5 },
+      { "iso": "CN", "name": "China", "volume": 118.6 },
+      { "iso": "CA", "name": "Canada", "volume": 18.4 },
+      { "iso": "DE", "name": "Germany", "volume": 17.9 },
+      { "iso": "JP", "name": "Japan", "volume": 16.5 }
+    ]
+  },
+  "ID": {
+    "name": "Indonesia",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 124.3 },
+      { "iso": "JP", "name": "Japan", "volume": 42.6 },
+      { "iso": "US", "name": "United States", "volume": 37.8 },
+      { "iso": "SG", "name": "Singapore", "volume": 35.2 },
+      { "iso": "MY", "name": "Malaysia", "volume": 28.7 }
+    ]
+  },
+  "NL": {
+    "name": "Netherlands",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 221.3 },
+      { "iso": "BE", "name": "Belgium", "volume": 120.5 },
+      { "iso": "GB", "name": "United Kingdom", "volume": 97.3 },
+      { "iso": "FR", "name": "France", "volume": 68.7 },
+      { "iso": "US", "name": "United States", "volume": 62.4 }
+    ]
+  },
+  "SA": {
+    "name": "Saudi Arabia",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 87.6 },
+      { "iso": "IN", "name": "India", "volume": 52.8 },
+      { "iso": "JP", "name": "Japan", "volume": 38.4 },
+      { "iso": "US", "name": "United States", "volume": 36.2 },
+      { "iso": "KR", "name": "South Korea", "volume": 34.7 }
+    ]
+  },
+  "TR": {
+    "name": "Turkey",
+    "partners": [
+      { "iso": "RU", "name": "Russia", "volume": 42.6 },
+      { "iso": "DE", "name": "Germany", "volume": 41.8 },
+      { "iso": "CN", "name": "China", "volume": 38.5 },
+      { "iso": "US", "name": "United States", "volume": 28.7 },
+      { "iso": "GB", "name": "United Kingdom", "volume": 22.3 }
+    ]
+  },
+  "CH": {
+    "name": "Switzerland",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 112.6 },
+      { "iso": "US", "name": "United States", "volume": 78.4 },
+      { "iso": "FR", "name": "France", "volume": 47.3 },
+      { "iso": "IT", "name": "Italy", "volume": 45.8 },
+      { "iso": "GB", "name": "United Kingdom", "volume": 38.5 }
+    ]
+  },
+  "SE": {
+    "name": "Sweden",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 42.5 },
+      { "iso": "NO", "name": "Norway", "volume": 36.8 },
+      { "iso": "DK", "name": "Denmark", "volume": 28.4 },
+      { "iso": "FI", "name": "Finland", "volume": 24.7 },
+      { "iso": "NL", "name": "Netherlands", "volume": 22.3 }
+    ]
+  },
+  "PL": {
+    "name": "Poland",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 156.4 },
+      { "iso": "FR", "name": "France", "volume": 28.6 },
+      { "iso": "CN", "name": "China", "volume": 27.3 },
+      { "iso": "IT", "name": "Italy", "volume": 26.8 },
+      { "iso": "NL", "name": "Netherlands", "volume": 22.5 }
+    ]
+  },
+  "BE": {
+    "name": "Belgium",
+    "partners": [
+      { "iso": "NL", "name": "Netherlands", "volume": 120.5 },
+      { "iso": "DE", "name": "Germany", "volume": 98.3 },
+      { "iso": "FR", "name": "France", "volume": 108.4 },
+      { "iso": "GB", "name": "United Kingdom", "volume": 38.7 },
+      { "iso": "US", "name": "United States", "volume": 42.6 }
+    ]
+  },
+  "NO": {
+    "name": "Norway",
+    "partners": [
+      { "iso": "GB", "name": "United Kingdom", "volume": 36.4 },
+      { "iso": "DE", "name": "Germany", "volume": 34.8 },
+      { "iso": "SE", "name": "Sweden", "volume": 36.8 },
+      { "iso": "NL", "name": "Netherlands", "volume": 24.6 },
+      { "iso": "FR", "name": "France", "volume": 16.3 }
+    ]
+  },
+  "AT": {
+    "name": "Austria",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 118.5 },
+      { "iso": "IT", "name": "Italy", "volume": 28.7 },
+      { "iso": "CH", "name": "Switzerland", "volume": 18.4 },
+      { "iso": "US", "name": "United States", "volume": 16.8 },
+      { "iso": "FR", "name": "France", "volume": 12.3 }
+    ]
+  },
+  "IE": {
+    "name": "Ireland",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 96.8 },
+      { "iso": "GB", "name": "United Kingdom", "volume": 52.4 },
+      { "iso": "DE", "name": "Germany", "volume": 28.6 },
+      { "iso": "NL", "name": "Netherlands", "volume": 24.3 },
+      { "iso": "FR", "name": "France", "volume": 22.8 }
+    ]
+  },
+  "TH": {
+    "name": "Thailand",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 105.4 },
+      { "iso": "JP", "name": "Japan", "volume": 58.6 },
+      { "iso": "US", "name": "United States", "volume": 52.3 },
+      { "iso": "MY", "name": "Malaysia", "volume": 28.4 },
+      { "iso": "VN", "name": "Vietnam", "volume": 22.7 }
+    ]
+  },
+  "SG": {
+    "name": "Singapore",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 137.5 },
+      { "iso": "MY", "name": "Malaysia", "volume": 92.6 },
+      { "iso": "US", "name": "United States", "volume": 76.8 },
+      { "iso": "TW", "name": "Taiwan", "volume": 52.3 },
+      { "iso": "ID", "name": "Indonesia", "volume": 35.2 }
+    ]
+  },
+  "MY": {
+    "name": "Malaysia",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 98.7 },
+      { "iso": "SG", "name": "Singapore", "volume": 92.6 },
+      { "iso": "US", "name": "United States", "volume": 52.4 },
+      { "iso": "JP", "name": "Japan", "volume": 38.5 },
+      { "iso": "TH", "name": "Thailand", "volume": 28.4 }
+    ]
+  },
+  "PH": {
+    "name": "Philippines",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 42.8 },
+      { "iso": "JP", "name": "Japan", "volume": 24.6 },
+      { "iso": "US", "name": "United States", "volume": 22.3 },
+      { "iso": "KR", "name": "South Korea", "volume": 16.8 },
+      { "iso": "SG", "name": "Singapore", "volume": 12.4 }
+    ]
+  },
+  "VN": {
+    "name": "Vietnam",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 123.8 },
+      { "iso": "CN", "name": "China", "volume": 117.5 },
+      { "iso": "KR", "name": "South Korea", "volume": 87.3 },
+      { "iso": "JP", "name": "Japan", "volume": 42.7 },
+      { "iso": "TH", "name": "Thailand", "volume": 22.7 }
+    ]
+  },
+  "AE": {
+    "name": "United Arab Emirates",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 72.4 },
+      { "iso": "IN", "name": "India", "volume": 84.3 },
+      { "iso": "SA", "name": "Saudi Arabia", "volume": 32.6 },
+      { "iso": "US", "name": "United States", "volume": 28.7 },
+      { "iso": "JP", "name": "Japan", "volume": 22.4 }
+    ]
+  },
+  "ZA": {
+    "name": "South Africa",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 36.8 },
+      { "iso": "DE", "name": "Germany", "volume": 18.4 },
+      { "iso": "US", "name": "United States", "volume": 16.7 },
+      { "iso": "IN", "name": "India", "volume": 12.5 },
+      { "iso": "JP", "name": "Japan", "volume": 10.8 }
+    ]
+  },
+  "NG": {
+    "name": "Nigeria",
+    "partners": [
+      { "iso": "IN", "name": "India", "volume": 14.8 },
+      { "iso": "CN", "name": "China", "volume": 12.6 },
+      { "iso": "US", "name": "United States", "volume": 10.3 },
+      { "iso": "ES", "name": "Spain", "volume": 8.7 },
+      { "iso": "NL", "name": "Netherlands", "volume": 7.5 }
+    ]
+  },
+  "EG": {
+    "name": "Egypt",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 16.3 },
+      { "iso": "US", "name": "United States", "volume": 8.7 },
+      { "iso": "SA", "name": "Saudi Arabia", "volume": 8.2 },
+      { "iso": "TR", "name": "Turkey", "volume": 7.6 },
+      { "iso": "IT", "name": "Italy", "volume": 6.8 }
+    ]
+  },
+  "AR": {
+    "name": "Argentina",
+    "partners": [
+      { "iso": "BR", "name": "Brazil", "volume": 30.4 },
+      { "iso": "CN", "name": "China", "volume": 18.6 },
+      { "iso": "US", "name": "United States", "volume": 14.8 },
+      { "iso": "DE", "name": "Germany", "volume": 5.2 },
+      { "iso": "CL", "name": "Chile", "volume": 4.8 }
+    ]
+  },
+  "CL": {
+    "name": "Chile",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 48.7 },
+      { "iso": "US", "name": "United States", "volume": 26.3 },
+      { "iso": "JP", "name": "Japan", "volume": 12.4 },
+      { "iso": "KR", "name": "South Korea", "volume": 8.6 },
+      { "iso": "BR", "name": "Brazil", "volume": 7.8 }
+    ]
+  },
+  "CO": {
+    "name": "Colombia",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 32.4 },
+      { "iso": "CN", "name": "China", "volume": 18.7 },
+      { "iso": "MX", "name": "Mexico", "volume": 6.3 },
+      { "iso": "BR", "name": "Brazil", "volume": 5.8 },
+      { "iso": "DE", "name": "Germany", "volume": 3.4 }
+    ]
+  },
+  "PE": {
+    "name": "Peru",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 28.6 },
+      { "iso": "US", "name": "United States", "volume": 18.4 },
+      { "iso": "KR", "name": "South Korea", "volume": 5.7 },
+      { "iso": "BR", "name": "Brazil", "volume": 4.3 },
+      { "iso": "JP", "name": "Japan", "volume": 3.8 }
+    ]
+  },
+  "IL": {
+    "name": "Israel",
+    "partners": [
+      { "iso": "US", "name": "United States", "volume": 38.6 },
+      { "iso": "CN", "name": "China", "volume": 16.8 },
+      { "iso": "GB", "name": "United Kingdom", "volume": 8.4 },
+      { "iso": "DE", "name": "Germany", "volume": 7.6 },
+      { "iso": "IN", "name": "India", "volume": 7.2 }
+    ]
+  },
+  "TW": {
+    "name": "Taiwan",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 268.5 },
+      { "iso": "US", "name": "United States", "volume": 112.6 },
+      { "iso": "JP", "name": "Japan", "volume": 86.7 },
+      { "iso": "SG", "name": "Singapore", "volume": 52.3 },
+      { "iso": "KR", "name": "South Korea", "volume": 52.4 }
+    ]
+  },
+  "HK": {
+    "name": "Hong Kong",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 542.6 },
+      { "iso": "TW", "name": "Taiwan", "volume": 48.3 },
+      { "iso": "SG", "name": "Singapore", "volume": 42.7 },
+      { "iso": "JP", "name": "Japan", "volume": 38.4 },
+      { "iso": "US", "name": "United States", "volume": 36.2 }
+    ]
+  },
+  "NZ": {
+    "name": "New Zealand",
+    "partners": [
+      { "iso": "CN", "name": "China", "volume": 28.4 },
+      { "iso": "AU", "name": "Australia", "volume": 18.9 },
+      { "iso": "US", "name": "United States", "volume": 12.6 },
+      { "iso": "JP", "name": "Japan", "volume": 6.8 },
+      { "iso": "KR", "name": "South Korea", "volume": 4.3 }
+    ]
+  },
+  "DK": {
+    "name": "Denmark",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 38.6 },
+      { "iso": "SE", "name": "Sweden", "volume": 28.4 },
+      { "iso": "US", "name": "United States", "volume": 18.7 },
+      { "iso": "NL", "name": "Netherlands", "volume": 14.3 },
+      { "iso": "NO", "name": "Norway", "volume": 12.8 }
+    ]
+  },
+  "FI": {
+    "name": "Finland",
+    "partners": [
+      { "iso": "DE", "name": "Germany", "volume": 22.4 },
+      { "iso": "SE", "name": "Sweden", "volume": 24.7 },
+      { "iso": "NL", "name": "Netherlands", "volume": 14.6 },
+      { "iso": "US", "name": "United States", "volume": 12.3 },
+      { "iso": "RU", "name": "Russia", "volume": 10.8 }
+    ]
+  }
+}

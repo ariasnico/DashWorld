@@ -1,0 +1,93 @@
+/* ==========================================================================
+   CORDIS DIE // Seismic Events & Connections Styles
+   ========================================================================== */
+
+/* --- Earthquake Tooltip (injected as HTML string in globe.gl pointLabel) --- */
+.event-tooltip {
+    background: rgba(10, 10, 10, 0.95);
+    border: 1px solid var(--danger);
+    border-left: 3px solid var(--danger);
+    padding: 10px 14px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: #ddd;
+    min-width: 220px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 20px rgba(255, 0, 60, 0.3);
+}
+
+.event-tooltip__header {
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--danger);
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed rgba(255, 0, 60, 0.4);
+    letter-spacing: 2px;
+}
+
+.event-tooltip__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    gap: 12px;
+}
+
+.event-tooltip__label {
+    color: #888;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.event-tooltip__value {
+    color: #fff;
+    font-weight: bold;
+    text-align: right;
+}
+
+.event-tooltip__value--mag {
+    color: var(--danger);
+    font-size: 14px;
+}
+
+/* --- Connection Bar (trade volume in intel panel) --- */
+.connection-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-top: 4px;
+    position: relative;
+}
+
+.connection-bar__fill {
+    height: 100%;
+    background: var(--accent);
+    box-shadow: 0 0 6px var(--accent);
+    transition: width 0.6s ease-out;
+}
+
+/* --- Connection list item specifics --- */
+.connection-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.connection-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.connection-item__name {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.connection-item__volume {
+    color: #fff;
+    font-size: 11px;
+    font-family: var(--font-mono);
+}

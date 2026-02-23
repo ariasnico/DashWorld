@@ -6,11 +6,13 @@
 
 import { CONFIG } from './config.js';
 import { updateTickerWithCountry } from './ticker.js';
+import { showConnections } from './connections.js';
 
 // --- DOM References ---
 const panel = document.getElementById('intelPanel');
 const factsList = document.getElementById('factsList');
 const newsList = document.getElementById('newsList');
+const connectionsList = document.getElementById('connectionsList');
 const pCountry = document.getElementById('pCountry');
 const pCoords = document.getElementById('pCoords');
 
@@ -34,7 +36,11 @@ export async function updateDashboard(props, lat, lng) {
     // Loading states
     factsList.innerHTML = '<li class="decrypting">[>>] DESENCRIPTANDO RED ESTATAL Y BANCO MUNDIAL...</li>';
     newsList.innerHTML = '<li class="decrypting">[>>] INTERCEPTANDO TRANSMISIONES LOCALES...</li>';
+    connectionsList.innerHTML = '<li class="decrypting">[>>] ANALIZANDO RED COMERCIAL...</li>';
     panel.classList.add('active');
+
+    // Show trade connection arcs on globe + render partner list
+    renderConnections(iso, lat, lng);
 
     // Cancel previous in-flight requests
     if (currentFetchController) currentFetchController.abort();
@@ -60,6 +66,42 @@ export function closePanel() {
 }
 
 // --- Private Helpers ---
+
+/**
+ * Show trade arcs on globe and render partner list in the panel.
+ */
+function renderConnections(iso, lat, lng) {
+    if (!iso) {
+        connectionsList.innerHTML = '<li><span style="color:#888;">[!] CODIGO ISO NO DISPONIBLE</span></li>';
+        return;
+    }
+
+    const partners = showConnections(iso, lat, lng);
+
+    if (!partners || partners.length === 0) {
+        connectionsList.innerHTML = '<li><span style="color:#888;">[!] RED COMERCIAL NO DISPONIBLE PARA ESTE OBJETIVO</span></li>';
+        return;
+    }
+
+    const maxVolume = Math.max(...partners.map(p => p.volume));
+
+    connectionsList.innerHTML = partners.map(p => {
+        const pct = ((p.volume / maxVolume) * 100).toFixed(0);
+        return `
+            <li>
+                <div class="connection-item">
+                    <div class="connection-item__header">
+                        <span class="connection-item__name">${p.name.toUpperCase()}</span>
+                        <span class="connection-item__volume">$${p.volume.toFixed(1)}B USD</span>
+                    </div>
+                    <div class="connection-bar">
+                        <div class="connection-bar__fill" style="width: ${pct}%"></div>
+                    </div>
+                </div>
+            </li>
+        `;
+    }).join('');
+}
 
 /**
  * Fetch macroeconomic data from RestCountries + World Bank.
