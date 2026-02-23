@@ -6,7 +6,6 @@
 
 import { CONFIG } from './config.js';
 import { updateTickerWithCountry } from './ticker.js';
-import { showConnections } from './connections.js';
 
 // --- DOM References ---
 const panel = document.getElementById('intelPanel');
@@ -70,12 +69,14 @@ export function closePanel() {
 /**
  * Show trade arcs on globe and render partner list in the panel.
  */
-function renderConnections(iso, lat, lng) {
+async function renderConnections(iso, lat, lng) {
     if (!iso) {
         connectionsList.innerHTML = '<li><span style="color:#888;">[!] CODIGO ISO NO DISPONIBLE</span></li>';
         return;
     }
 
+    // Dynamic import to avoid circular dependency: globe → dashboard → connections → globe
+    const { showConnections } = await import('./connections.js');
     const partners = showConnections(iso, lat, lng);
 
     if (!partners || partners.length === 0) {

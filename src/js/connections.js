@@ -85,7 +85,8 @@ export function showConnections(iso, lat, lng) {
         .arcStroke('stroke')
         .arcDashLength(cfg.arcDashLength)
         .arcDashGap(cfg.arcDashGap)
-        .arcDashAnimateTime(cfg.arcDashAnimateTime);
+        .arcDashAnimateTime(cfg.arcDashAnimateTime)
+        .arcAltitudeAutoScale(cfg.arcAltitudeAutoScale);
 
     // Apply connection rings via coordinator
     updateRings('connections', rings);

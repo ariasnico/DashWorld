@@ -82,7 +82,7 @@ async function fetchEarthquakes() {
             .pointLng('lng')
             .pointRadius('size')
             .pointColor('color')
-            .pointAltitude(0.01)
+            .pointAltitude(cfg.pointAltitude)
             .pointLabel(d => `
                 <div class="event-tooltip">
                     <div class="event-tooltip__header">ALERTA SISMICA</div>
