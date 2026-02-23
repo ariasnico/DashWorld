@@ -4,7 +4,7 @@
  * Powered by Fuse.js (loaded via CDN) for typo-tolerant matching.
  */
 
-import { focusCountry } from './globe.js';
+import { focusCountry, getCountryCoords } from './globe.js';
 
 const input = document.getElementById('searchInput');
 const resultsList = document.getElementById('searchResults');
@@ -121,8 +121,10 @@ function updateActive(items) {
 
 function selectCountry(feature) {
     const props = feature.properties;
-    const lat = props.LABEL_Y ?? 0;
-    const lng = props.LABEL_X ?? 0;
+    const iso = (props.ISO_A2 && props.ISO_A2 !== '-99') ? props.ISO_A2 : null;
+    const coords = iso ? getCountryCoords(iso) : null;
+    const lat = coords ? coords.lat : 0;
+    const lng = coords ? coords.lng : 0;
     input.value = '';
     closeDropdown();
     focusCountry(props, lat, lng);
