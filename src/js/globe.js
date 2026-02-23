@@ -23,6 +23,12 @@ export function registerCountriesCallback(fn) {
  * Initialize the 3D globe, load GeoJSON, and bind interactions.
  */
 export function initGlobe() {
+    if (typeof Globe === 'undefined') {
+        console.error('Globe library failed to load from CDN');
+        hideLoader();
+        return;
+    }
+
     const cfg = CONFIG.globe;
 
     world = Globe()(container)
@@ -59,7 +65,10 @@ export function initGlobe() {
             setTimeout(hideLoader, 1000);
             if (_countriesReadyCallback) _countriesReadyCallback(countries.features);
         })
-        .catch(console.error);
+        .catch(err => {
+            console.error('Failed to load country polygons:', err);
+            hideLoader();
+        });
 
     // Responsive resize
     window.addEventListener('resize', handleResize);
