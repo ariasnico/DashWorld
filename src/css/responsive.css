@@ -123,10 +123,6 @@
         margin-top: var(--space-md);
     }
 
-    .data-list--fixed {
-        min-height: 120px;
-    }
-
     .data-list li {
         font-size: 11px;
         margin-bottom: 10px;
@@ -186,10 +182,5 @@
 
     .intel-panel {
         top: 50px;
-        flex-direction: column;
-    }
-
-    .data-list--fixed {
-        min-height: 100px;
     }
 }
